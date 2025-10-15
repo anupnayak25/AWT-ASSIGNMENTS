@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+  <h2>Sort</h2>
+  <input type="text" id="sentence" placeholder="Enter a sentence" size="50" />
+  <button onclick="sortWords()">Sort</button>
+  <p id="sortedWords"></p>
+
+  <script>
+    function sortWords() {
+      let text = document.getElementById('sentence').value.trim();
+      let words = text.split(/\s+/);
+      words.sort();
+      document.getElementById('sortedWords').textContent = words.join(", ");
+    }
+  </script>
+</body>
+</html>

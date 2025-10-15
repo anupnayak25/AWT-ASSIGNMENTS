@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>css</title>
+  <style>
+    h1 {
+      color: rgb(230, 140, 5);
+    }
+    .highlight {
+      background-color:rgb(52, 175, 82);
+    }
+    #unique {
+      font-weight: bold;
+    }
+    
+    div p {
+      color: green;  /*desc*/
+    }
+    a:hover {  /*pseudo*/
+      color: rgb(17, 70, 247);
+      text-decoration: underline;
+    }
+    li:first-child {
+      font-weight: bold;
+      color: purple;
+    }
+    section > p {  /*child*/
+      color: orange;
+    }
+    a1[title]{ /*att*/
+        color: rgb(40, 161, 56);
+    }
+
+  </style>
+</head>
+<body>
+<h1>Selectors</h1>
+<p class="highlight">This is highlights;.</p>
+<p id="unique">ID selector.</p>
+<section>
+<p>child </p></section>
+<div>
+<p>This paragraph is inside a div .</p>
+
+</div>
+<a href="#">link</a>
+<ul>
+    <li>First item (pseudo-class)</li>
+  </ul>
+
+<ol>
+    <a1 title="mytitle" >abc</a1>
+</ol>
+</body>
+</html>

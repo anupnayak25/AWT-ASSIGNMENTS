@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function scopeDemo() {
+  var varVariable = "I am var";
+  let letVariable = "I am let";
+  const constVariable = "I am const";
+
+  if(true) {
+    var varVariable = "var changed inside if";
+    let letVariable = "let inside if";
+    const constVariable = "const inside if";
+
+    console.log(varVariable);
+    console.log(letVariable);
+    console.log(constVariable);
+  }
+
+  console.log(varVariable);
+  console.log(letVariable);
+  console.log(constVariable);
+}
+
+scopeDemo();
+</script>
+</head>
+<body>
+    
+</body>
+</html>

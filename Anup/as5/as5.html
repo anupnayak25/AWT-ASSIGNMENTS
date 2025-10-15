@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+  <h2></h2>
+  <input type="text" id="namesInput" placeholder="Enter names " size="50" />
+  <button onclick="countNames()">Count</button>
+  <p id="countResult"></p>
+
+  <script>
+    function countNames() {
+      let input = document.getElementById('namesInput').value.trim();
+      let names = input.split(',').map(name => name.trim().toLowerCase());
+      let count = 0;
+      for (let name of names) {
+        if (name.endsWith('ie') || name.endsWith('y')) {
+          count++;
+        }
+      }
+      document.getElementById('countResult').textContent = "Count: " + count;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    table.td,tr{
+        border-collapse: collapse;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+ </style>
+<script>
+    let d=new Date().getDay();
+    let menu; 
+    switch(d){
+        case 0:menu=["halva","panner","gobi"];break;
+        case 1:menu=["biryani","panner","gobi"];break;
+        case 2:menu=["korirotti","panner","gobi"];break;
+        case 3:menu=["fried rice","panner","gobi"];break;
+        case 4:menu=["fried rice","panner","gobi"];break;
+        case 5:menu=["halva","panner","gobi"];break;
+        case 6:menu=["biryani","panner","gobi"];break;
+    }
+    document.write(`<table style="border:${d}px solid black;"><tr><td>Food Items</td></tr>`);
+    menu.forEach(element => {
+         document.write(`<tr><td>${element}</td></tr>`);
+        });
+    document.write(`</table>`);
+
+
+</script>
+<body>
+    
+</body>
+</html>

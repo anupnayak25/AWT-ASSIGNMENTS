@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+  <h2>Reverse Digits of a Number</h2>
+  <input type="number" id="numberInput" placeholder="number" />
+  <button onclick="reverseDigits()">Reverse</button>
+  <p id="reverseResult"></p>
+  <script>
+    function reverseDigits(){
+      let num = document.getElementById('numberInput').value
+      let reversed = num.split('').reverse().join('');
+      document.getElementById('reverseResult').textContent = reversed;
+    }
+  </script>
+</body>
+</html>

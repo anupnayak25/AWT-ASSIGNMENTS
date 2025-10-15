@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>String Functions Example</title>
+</head>
+<body>
+
+<script>
+  let st = "Hello World";
+
+  document.write("Original string: " + st + "<br>");
+  document.write("Length: " + st.length + "<br>");
+  document.write("Uppercase: " + st.toUpperCase() + "<br>");
+  document.write("Lowercase: " + st.toLowerCase() + "<br>");
+  document.write("Substring (0,4): " + st.substring(0,4) + "<br>");
+  document.write("Character at index 2: " + st.charAt(2) + "<br>");
+  document.write("Index of 'a': " + st.indexOf("a") + "<br>");
+  document.write("Last index of 'a': " + st.lastIndexOf("a") + "<br>");
+  document.write("Includes 'rad': " + st.includes("rad") + "<br>");
+  document.write("Starts with 'Var': " + st.startsWith("Var") + "<br>");
+  document.write("Ends with 'ada': " + st.endsWith("ada") + "<br>");
+  
+  let st2 = "  Hello  ";
+  document.write("Trimmed string: '" + st2.trim() + "'<br>");
+  
+  document.write("Replace 'rada' with 'sha': " + st.replace("rada", "sha") + "<br>");
+</script>
+
+</body>
+</html>
+
+
+ 

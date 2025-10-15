@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links and Images Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        img {
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+        
+        .image-link img:hover {
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .navigation {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Links and Images Demo Page</h1>
+    
+    <div class="navigation">
+        <h3>Quick Navigation:</h3>
+        <a href="#image-section">Go to Image Section</a> | 
+        <a href="#link-section">Go to Link Section</a> | 
+        <a href="#same-page-section">Go to Same Page Links</a> | 
+        <a href="#image-link-section">Go to Image as Link</a>
+    </div>
+
+    <div class="section" id="image-section">
+        <h2>A. Simple Image</h2>
+        <p>Here's a sample image:</p>
+        <a href="./a3.html"><img src="./Pasted image.png"
+             alt="Sample placeholder image" 
+             title="This is a sample image">
+        </a>
+        <p><em>Note: This uses a placeholder image. Replace with your actual image path.</em></p>
+    </div>
+    <div class="section" id="link-section">
+        <h2>B. Link to Another Page</h2>
+        <p>Here are some external links:</p>
+        <ul>
+            <li><a href="Index.html" target="_blank">Link to Index.html (same directory)</a></li>
+            <li><a href="https://www.google.com" target="_blank">Link to Google</a></li>
+            <li><a href="https://www.github.com" target="_blank">Link to GitHub</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="same-page-section">
+        <h2>C. Links to Sections of Same Page</h2>
+        <p>These links will take you to different sections on this same page:</p>
+        <ul>
+            <li><a href="#image-section">Jump to Image Section</a></li>
+            <li><a href="#link-section">Jump to External Links Section</a></li>
+            <li><a href="#image-link-section">Jump to Image as Link Section</a></li>
+            <li><a href="#bottom-section">Jump to Bottom Section</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="image-link-section">
+        <h2>D. Image as a Link to Another Page</h2>
+        <p>Click on the image below to navigate to another page:</p>
+        
+        <a href="Index.html" class="image-link" title="Click to go to Index.html">
+            <img src="https://via.placeholder.com/250x150/FF5722/white?text=Click+Me!" 
+                 alt="Clickable image that links to Index.html">
+        </a>
+        
+        <p>You can also create an image link to an external website:</p>
+        <a href="https://www.nmamit.nitte.edu.in" target="_blank" class="image-link" title="Click to visit NMAMIT website">
+            <img src="https://via.placeholder.com/250x150/2196F3/white?text=NMAMIT+Link" 
+                 alt="Clickable image that links to NMAMIT website">
+        </a>
+    </div>
+
+    <div class="section">
+        <h2>Additional Examples</h2>
+        
+        <h3>Local Image Example</h3>
+        <p>To use a local image, replace the placeholder URL with your image path:</p>
+        <code>&lt;img src="images/my-photo.jpg" alt="My Photo"&gt;</code>
+        
+        <h3>Different Image Formats Supported</h3>
+        <ul>
+            <li>JPEG (.jpg, .jpeg)</li>
+            <li>PNG (.png)</li>
+            <li>GIF (.gif)</li>
+            <li>SVG (.svg)</li>
+            <li>WebP (.webp)</li>
+        </ul>
+        
+        <h3>Link Attributes</h3>
+        <ul>
+            <li><strong>target="_blank"</strong> - Opens link in new tab</li>
+            <li><strong>title</strong> - Shows tooltip on hover</li>
+            <li><strong>rel="noopener"</strong> - Security attribute for external links</li>
+        </ul>
+    </div>
+
+    <div class="section" id="bottom-section">
+        <h2>Bottom Section</h2>
+        <p>You've reached the bottom of the page! This section was linked from the same-page navigation above.</p>
+        <p><a href="#image-section">Back to top</a></p>
+    </div>
+
+
+</body>
+</html>

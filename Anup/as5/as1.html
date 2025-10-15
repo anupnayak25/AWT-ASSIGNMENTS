@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Squares and Cubes Alert</title></head>
+<body>
+  <button onclick="showTable()">Show Table (5 to 15)</button>
+
+  <script>
+    function showTable() {
+      let message = "Number | Square | Cube\n";
+      for (let i = 5; i <= 15; i++) {
+        message += i + "| " + (i * i) + "| " + (i * i * i) + "\n";
+      }
+      alert(message);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sort Numbers</title></head>
+<body>
+  <h2>Sort Numbers</h2>
+  <input type="text" id="numbersInput" placeholder="Enter numbers  "50" />
+  <select id="sortOrder">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+  </select>
+  <button onclick="sortNumbers()">Sort</button>
+  <p id="sortedNumbers"></p>
+  <script>
+    function sortNumbers() {
+      let input = document.getElementById('numbersInput').value.trim();
+      let numbers = input.split(',').map(n => Number(n.trim()));
+      for (let num of numbers) {
+        if (isNaN(num)) {
+          alert("Please enter only valid numbers separated by commas.");
+          return;
+        }}
+      let order = document.getElementById('sortOrder').value;
+      if (order === 'asc') {
+        numbers.sort((a, b) => a - b);
+      } else {
+        numbers.sort((a, b) => b - a);
+      }
+      document.getElementById('sortedNumbers').textContent = "Sorted numbers: " + numbers.join(", ");
+    }
+  </script>
+</body>
+</html>

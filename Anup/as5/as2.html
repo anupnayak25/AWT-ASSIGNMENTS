@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fibonacci Series</title></head>
+<body>
+  <h2>Fibonacci </h2>
+  <input type="number" id="fibCount" min="1" />
+  <button onclick="generateFib()">Generate</button>
+  <p id="fibResult"></p>
+
+  <script>
+    function generateFib() {
+      let n = parseInt(document.getElementById('fibCount').value);
+      if (isNaN(n) || n <= 0) {
+        alert("Please enter a positive number");
+        return;
+      }
+      let fib = [0, 1];
+      for (let i = 2; i < n; i++) {
+        fib[i] = fib[i-1] + fib[i-2];
+      }
+      document.getElementById('fibResult').textContent = fib.slice(0, n).join(", ");
+    }
+  </script>
+</body>
+</html>

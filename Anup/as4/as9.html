@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+let fruits = ["apple", "banana", "cherry"];
+
+fruits.push("date");
+fruits.pop();
+fruits.shift();
+fruits.unshift("mango");
+
+fruits.forEach(fruit => console.log(fruit));
+
+let upperFruits = fruits.map(fruit => fruit.toUpperCase());
+console.log(upperFruits);
+
+let filtered = fruits.filter(fruit => fruit.startsWith("b"));
+console.log(filtered);
+</script>
+<body></body></html>
+</html>
