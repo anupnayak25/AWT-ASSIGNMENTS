@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Registration Form with Help Box</h3>
+
+<form>
+Name: <input onfocus="help('Enter full name')"><br><br>
+Age: <input onfocus="help('Enter your age (18-60)')"><br><br>
+Mobile: <input onfocus="help('Enter 10-digit mobile number')"><br><br>
+Password: <input type="password" onfocus="help('Enter a strong password')"><br><br>
+</form>
+
+<p id="help" style="color:blue;">Help messages will appear here</p>
+
+<script>
+function help(msg) {
+  document.getElementById("help").innerText = msg;
+}
+</script>
+</body>
+</html>

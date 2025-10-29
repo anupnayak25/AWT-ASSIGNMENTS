@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>3. Grocery Items</h3>
+
+<form>
+  <input type="checkbox" name="item" value="Milk">Milk<br>
+  <input type="checkbox" name="item" value="Eggs">Eggs<br>
+  <input type="checkbox" name="item" value="Bread">Bread<br>
+  <input type="checkbox" name="item" value="Fruits">Fruits<br>
+</form>
+
+<button onclick="countItems()">Count Checked</button>
+<p id="result"></p>
+
+<script>
+function countItems() {
+  let items = document.getElementsByName("item");
+  let count = 0;
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].checked) count++;
+  }
+  document.getElementById("result").innerText = "You checked " + count + " items.";
+}
+</script>
+</body>
+</html>

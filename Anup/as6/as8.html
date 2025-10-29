@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>8. Event Propagation Example</h3>
+
+<div id="outer" style="background:lightblue;padding:20px;">
+  Outer Div
+  <div id="inner" style="background:lightgreen;padding:20px;">
+    Inner Div
+    <button id="btn">Click Me</button>
+  </div>
+</div>
+
+<script>
+document.getElementById("outer").addEventListener("click", function() {
+  alert("Outer Div clicked!");
+}, false);  // Bubbling
+
+document.getElementById("inner").addEventListener("click", function() {
+  alert("Inner Div clicked!");
+}, false);
+
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+}, false);
+</script>
+</body>
+</html>

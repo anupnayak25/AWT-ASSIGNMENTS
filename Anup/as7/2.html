@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Move Paragraph</h3>
+
+X: <input id="x" size="4"> 
+Y: <input id="y" size="4"> 
+<button onclick="move()">Move</button>
+
+<p id="para" style="position:absolute; left:50px; top:50px;">Move Me!</p>
+
+<script>
+function move() {
+  let px = document.getElementById("x").value;
+  let py = document.getElementById("y").value;
+  let p = document.getElementById("para");
+  p.style.left = px + "px";
+  p.style.top = py + "px";
+}
+</script>
+</body>
+</html>

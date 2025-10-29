@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>6. Computation Page</h3>
+
+Number 1: <input id="num1"><br><br>
+Number 2: <input id="num2"><br><br>
+Operation (+,-,*,/,%) : <input id="op"><br><br>
+<button onclick="compute()">Compute</button><br><br>
+Result: <input id="res" readonly>
+
+<script>
+window.onload = function() {
+  alert("Welcome to the Computation Page!");
+}
+
+function compute() {
+  let a = document.getElementById("num1").value;
+  let b = document.getElementById("num2").value;
+  let op = document.getElementById("op").value;
+  let result = document.getElementById("res");
+
+  if (isNaN(a) || isNaN(b) || a=="" || b=="") {
+    alert("Enter valid numbers!");
+    return;
+  }
+
+  a = parseFloat(a);
+  b = parseFloat(b);
+
+  let ans;
+  if (op == "+") ans = a + b;
+  else if (op == "-") ans = a - b;
+  else if (op == "*") ans = a * b;
+  else if (op == "/") ans = b != 0 ? a / b : "Divide by 0 error";
+  else if (op == "%") ans = a % b;
+  else {
+    alert("Enter valid operator (+,-,*,/,%)");
+    return;
+  }
+
+  result.value = ans;
+}
+</script>
+</body>
+</html>

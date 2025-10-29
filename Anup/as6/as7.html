@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3> Registration Form</h3>                              
+<form onsubmit="return validateForm()">
+  Full Name: <input id="name"><br><br>
+  Age: <input id="age"><br><br>
+  Mobile: <input id="mobile"><br><br>
+  Aadhar: <input id="aadhar"><br><br>
+  Password: <input type="password" id="pass"><br><br>
+  Confirm Password: <input type="password" id="cpass"><br><br>
+  <input type="submit" value="Register">
+</form>
+
+<script>
+function validateForm() {
+  let name = document.getElementById("name").value;
+  let age = document.getElementById("age").value;
+  let mob = document.getElementById("mobile").value;
+  let aadhar = document.getElementById("aadhar").value;
+  let pass = document.getElementById("pass").value;
+  let cpass = document.getElementById("cpass").value;
+
+  let namePattern = /^[A-Z][a-z]*$/;
+  if (!namePattern.test(name)) {
+    alert("Enter full name with first letters capital!");
+    return false;
+  }
+
+  if (age < 18 || age > 60) {
+    alert("Age must be between 18 and 60!");
+    return false;
+  }
+
+  let mobPattern = /^[6-9]\d{9}$/;
+  if (!mobPattern.test(mob)) {
+    alert("Enter a valid 10-digit mobile number!");
+    return false;
+  }
+
+  let aadharPattern = /^\d{12}$/;
+  if (!aadharPattern.test(aadhar)) {
+    alert("Aadhar must be 12 digits!");
+    return false;
+  }
+
+  let passPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{6,}$/;
+  if (!passPattern.test(pass)) {
+    alert("Password must have letters, digits and one special character!");
+    return false;
+  }
+
+  if (pass !== cpass) {
+    alert("Passwords do not match!");
+    return false;
+  }
+
+  alert("Registration Successful!");
+  return true;
+}
+</script>
+</body>
+</html>

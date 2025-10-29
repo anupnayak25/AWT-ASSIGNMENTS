@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>1. Pattern Methods Example</h3>
+<p id="out"></p>
+
+<script>
+let text = "JavaScript";
+let pattern = /JavaScript/g; // regular expression
+
+document.getElementById("out").innerHTML =
+"test() → " + pattern.test(text) + "<br>" +      // true or false
+"exec() → " + pattern.exec(text) + "<br>" +      // first match
+"match() → " + text.match(pattern) + "<br>" +    // all matches
+"replace() → " + text.replace(pattern, "JS");    // replaced result
+</script>
+</body>
+</html>

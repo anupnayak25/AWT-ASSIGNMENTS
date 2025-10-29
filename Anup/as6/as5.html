@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>5. Favourite Colour (DOM2 Events)</h3>
+
+<input type="radio" name="color" value="Red">Red<br>
+<input type="radio" name="color" value="Blue">Blue<br>
+<input type="radio" name="color" value="Green">Green<br>
+
+<p id="msg"></p>
+
+<script>
+let radios = document.getElementsByName("color");
+
+for (let i = 0; i < radios.length; i++) {
+  radios[i].addEventListener("click", function() {
+    document.getElementById("msg").innerText = "You chose " + radios[i].value;
+  });
+}
+</script>
+</body>
+</html>

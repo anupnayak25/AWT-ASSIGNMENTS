@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Move the Text</h3>
+
+<p id="text" style="position:absolute; left:100px; top:100px;">Welcome to NMAMIT Nitte</p>
+
+<button onclick="move(-10,0)">Left</button>
+<button onclick="move(10,0)">Right</button>
+<button onclick="move(0,-10)">Up</button>
+<button onclick="move(0,10)">Down</button>
+
+<script>
+function move(x, y) {
+  let t = document.getElementById("text");
+  t.style.left = (parseInt(t.style.left) + x) + "px";
+  t.style.top = (parseInt(t.style.top) + y) + "px";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>4. Choose Your Favourite Colour</h3>
+
+<input type="radio" name="color" onclick="showColor('Red')">Red<br>
+<input type="radio" name="color" onclick="showColor('Blue')">Blue<br>
+<input type="radio" name="color" onclick="showColor('Green')">Green<br>
+
+<p id="msg"></p>
+
+<script>
+function showColor(color) {
+  document.getElementById("msg").innerText = "Your favourite colour is " + color;
+}
+</script>
+</body>
+</html>

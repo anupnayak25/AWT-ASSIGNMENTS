@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body onclick="showImg(event)">
+<h3>Click Anywhere to Show Image</h3>
+
+<img id="me" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" 
+     style="position:absolute; display:none;">
+
+<script>
+function showImg(e) {
+  let img = document.getElementById("me");
+  img.style.left = e.pageX + "px";
+  img.style.top = e.pageY + "px";
+  img.style.display = "block";
+}
+</script>
+</body>
+</html>

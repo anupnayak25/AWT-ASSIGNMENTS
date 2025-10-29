@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="head" onmouseover="style.color='red'; style.fontFamily='cursive';"
+    onmouseout="style.color='black'; style.fontFamily='Arial';">
+Welcome to NMAMIT, Nitte
+</h1>
+
+<p onmousemove="showCoords(event)">Move mouse here!</p>
+X: <input id="x" size="5"> 
+Y: <input id="y" size="5">
+
+<script>
+function showCoords(e) {
+  document.getElementById("x").value = e.clientX;
+  document.getElementById("y").value = e.clientY;
+}
+</script>
+</body>
+</html>
