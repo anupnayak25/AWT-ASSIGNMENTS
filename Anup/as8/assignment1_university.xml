@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="assignment1_style.css"?>
+<!-- University XML representation -->
+<university>
+  <name>Example Technical University</name>
+  <location>Sample City</location>
+  <departments>
+    <department id="CSE">
+      <name>Computer Science and Engineering</name>
+      <head>Dr. A. Kumar</head>
+      <programs>
+        <program level="UG">B.Tech</program>
+        <program level="PG">M.Tech</program>
+      </programs>
+    </department>
+    <department id="ECE">
+      <name>Electronics and Communication</name>
+      <head>Dr. S. Patel</head>
+      <programs>
+        <program level="UG">B.Tech</program>
+        <program level="PG">M.Tech</program>
+      </programs>
+    </department>
+  </departments>
+  <students>
+    <student roll="1001">
+      <name>Anita Rao</name>
+      <dept>CSE</dept>
+      <year>3</year>
+    </student>
+    <student roll="1002">
+      <name>Rohit Singh</name>
+      <dept>ECE</dept>
+      <year>2</year>
+    </student>
+  </students>
+</university>

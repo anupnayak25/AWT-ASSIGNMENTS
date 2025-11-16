@@ -1,0 +1,7 @@
+/* Styles for the university XML when viewed in a browser that supports XML+CSS */
+body { font-family: Arial, sans-serif; background:#f7f9fc; color:#222; padding:20px; }
+university { display:block; border:1px solid #cbd5e1; background:#fff; padding:16px; border-radius:8px; }
+university > name { display:block; font-size:1.6em; font-weight:700; color:#0f172a; margin-bottom:6px; }
+university > location { display:block; font-size:0.95em; color:#334155; margin-bottom:12px; }
+department, student { display:block; margin:8px 0; padding:8px; border-left:4px solid #60a5fa; background:#fbfdff; border-radius:6px; }
+department > name, student > name { font-weight:600; }
